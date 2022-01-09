@@ -8,15 +8,6 @@
     margin-right: 30px;
 }
 
-.collectionCard > img {
-    width: 100%;
-}
-
-.wethImage{
-    height: 23px;
-    width: 15px;
-}
-
 .details{
     padding: 20px;
 }
@@ -31,6 +22,15 @@
     font-size: 18px;
     font-weight: 600;
 }
+.collectionCard > img {
+    width: 100%;
+}
+
+.wethImage{
+    height: 23px;
+    width: 15px;
+}
+
 
 .priceContainer{
     display: flex;
