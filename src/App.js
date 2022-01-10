@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import CollectionCard from "./components/CollectionCard";
+import PunkList from "./components/PunkList";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -26,6 +27,9 @@ function App() {
         name={"Pipe Punk"}
         traits={[{ value: 7 }]}
         image="https://ipfs.thirdweb.com/ipfs/bafkreiasgnibw32isqfyjnv5lhj4wxzp6izayculjlo4ampmmfla3j4tj4"
+      />
+      <PunkList
+      punkListData={punkListData}
       />
     </div>
   );
