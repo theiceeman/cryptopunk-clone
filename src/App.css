@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 .app {
-  text-align: center;
+  /* text-align: center; */
   background-color: #000;
   padding: 20px;
   min-height: 100vh;
