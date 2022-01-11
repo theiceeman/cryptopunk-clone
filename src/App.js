@@ -1,12 +1,14 @@
 import "./App.css";
 import Header from "./components/Header";
-import CollectionCard from "./components/CollectionCard";
 import PunkList from "./components/PunkList";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Main from "./components/Main";
 
 function App() {
   const [punkListData, setPunkListData] = useState([]);
+  const [selectedPunk, setSelectedPunk] = useState(2);
+
 
   useEffect(() => {
     const getMyNfts = async () => {
@@ -22,15 +24,20 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <CollectionCard
-        id={0}
-        name={"Pipe Punk"}
-        traits={[{ value: 7 }]}
-        image="https://ipfs.thirdweb.com/ipfs/bafkreiasgnibw32isqfyjnv5lhj4wxzp6izayculjlo4ampmmfla3j4tj4"
-      />
-      <PunkList
-      punkListData={punkListData}
-      />
+      {
+        punkListData.length > 0 && (
+          <>
+          <Main
+          punkListData={punkListData}
+          selectedPunk={selectedPunk}
+          />
+          <PunkList
+          punkListData={punkListData}
+          setSelectedPunk={setSelectedPunk}
+          />
+          </>
+        )
+      }
     </div>
   );
 }
